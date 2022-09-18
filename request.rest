@@ -1,0 +1,57 @@
+### SIGNUP
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+	"name": "teste5",
+	"email": "teste5@lbn.com",
+	"password": "123456",
+	"role":"ADMIN"
+   
+}
+
+### LOGIN
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+	"email": "teste5@lbn.com",
+	"password": "123456"
+}
+
+### GET USERS
+GET http://localhost:3003/user/users
+
+### GET USER BY ID
+GET http://localhost:3003/user/users/:id
+
+### CREATE BAND
+POST http://localhost:3003/band/bands
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1ZjY1NDQxLWQ1NmEtNDk4MC1hYzNlLTU1ZTE0NWM3NTc3NCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MzE5OTkyMiwiZXhwIjoxNjYzMjA3MTIyfQ.y55jOog6x6BvkNvav4nEoYFyUpbSqkkR5cBFS4lU2Tk
+
+{
+"name": "Coldplay",
+"music_genre": "Rock", 
+"responsible": "Chris Martin"  
+}
+  
+### GET BAND BY ID
+GET http://localhost:3003/band/bands/:id
+
+### REGISTER SHOW
+POST http://localhost:3003/show/register
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1ZjY1NDQxLWQ1NmEtNDk4MC1hYzNlLTU1ZTE0NWM3NTc3NCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MzIwMDAxOSwiZXhwIjoxNjYzMjA3MjE5fQ.Lh4fpGdIj_PEtu_4GsoWMZDGE4WzVlGLRBvzdhHeP1U
+
+{
+	"weekDay": "SABADO",
+	"startTime": "10",
+	"endTime": "12",
+	"bandId": "cb627c14-d1e8-4e94-a729-e5008fd00155"
+}
+
+### GET SHOWS
+GET http://localhost:3003/show?weekDay=SABADO
+Content-Type: application/json
+
